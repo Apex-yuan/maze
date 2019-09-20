@@ -147,8 +147,8 @@ void MazePerson::start(void)
             if(MazeMap::checkWallOrNot(forward_x, forward_y))
             {
                 turnLeft();
-                goAhead();
-                drawPerson();
+                // goAhead();
+                // drawPerson();
             }
             else 
             {
