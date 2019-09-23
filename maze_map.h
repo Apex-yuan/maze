@@ -11,16 +11,20 @@
 class MazeMap
 {
     public:
-    MazeMap(void);
+    MazeMap();
     MazeMap(int *map, int row, int column);
     ~MazeMap(void);
     void drawMap(void);
+    void setRoadChar(char r);
+    void setWallChar(char w);
     static bool checkWallOrNot(int x, int y);
-    
-    static int maze_map[LENGTH][WIDTH];
+        
     private:
     char road;
     char wall;
+    static int maze_map[LENGTH][WIDTH];
+    static int maze_height_;
+    static int maze_width_;
 };
 
 

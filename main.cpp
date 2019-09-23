@@ -6,7 +6,20 @@
 
 int main(void)
 {
-    MazeMap mazemap;
+    int default_map[5][10] = {ROAD, WALL, ROAD, WALL, WALL, WALL, WALL, ROAD, WALL, ROAD,
+                            ROAD, WALL, ROAD, WALL, WALL, WALL, WALL, ROAD, WALL, WALL,
+                            WALL, WALL, WALL, ROAD, ROAD, ROAD, WALL, ROAD, WALL, ROAD,
+                            WALL, ROAD, ROAD, ROAD, WALL, ROAD, ROAD, ROAD, WALL, WALL,
+                            WALL, ROAD, WALL, WALL, WALL, WALL, WALL, WALL, WALL, WALL
+                            };
+    // HANDLE fd = GetStdHandle(STD_OUTPUT_HANDLE);
+    // CONSOLE_CURSOR_INFO cinfo;
+    // cinfo.bVisible = 1;
+    // cinfo.dwSize = 1;
+    // SetConsoleCursorInfo(fd, &cinfo);
+
+    MazeMap mazemap(&default_map[0][0],5,10);
+    mazemap.setWallChar('#');
     system("cls");
     mazemap.drawMap();
 
@@ -16,6 +29,6 @@ int main(void)
 
     
 
-    mazeperson.gotoXY(0,15);
+    // mazeperson.gotoXY(0,15);
     return 0;
 }
